@@ -169,8 +169,8 @@
 @media (max-width: 767px){
 
   .ct-sliderPop {
-    height: 500px;
-    max-width: 500px !important;
+    height: 300px;
+    max-width: 300px !important;
   }
   .ct-sliderPop > .inner > .cow-map-img {
     margin-top: 50px;
