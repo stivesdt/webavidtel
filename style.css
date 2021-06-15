@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+main {
+    width: 70vm;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 400px;
+    border: solid 1px;
+    padding: 3rem;
+}
+button {
+    margin-top: 1rem;
+}
+

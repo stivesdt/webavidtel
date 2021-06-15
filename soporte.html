@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avidtel Interconecta tu vida</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<!-- 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./stylewx.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/stilos.css">
+
+</head>
+
+
+<body>
+
+  
+  
+  <!-- //-- -->
+
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Busqueda" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav> -->
+
+  <!-- //-- -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a href="http://127.0.0.1:5500/" class="navbar-left"><img src="assets/logo.jpg"></a>
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+
+
+        <li class="nav-item logged-out" style="display: block;">
+            <a class="navbar-brand" href="http://127.0.0.1:5500/micuenta.html"><b>Mi Cuenta</b></a>
+        </li>                  
+          
+        <li class="nav-item logged-out" style="display: block;">
+          <a class="navbar-brand" href="http://127.0.0.1:5500/sobrenosotros.html">Sobre nosotros</a>
+        </li>
+        <li class="nav-item logged-out" style="display: block;">
+            <a class="navbar-brand" href="http://127.0.0.1:5500/soporte.html">Soporte</a>
+        </li>
+        <li class="nav-item logged-out" style="display: block;">
+          <a class="navbar-brand" href="http://127.0.0.1:5500/servicios.html" >Servicios</a>
+        </li>
+       
+        <li class="nav-item logged-out" style="display: none;">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#signupModal">Registro de Usuario</a>
+        </li>
+        <li class="nav-item logged-in" style="display: none;">
+          <a class="navbar-brand" href="#" id="logout">Cerrar Sesión </a>
+        </li>
+           
+        </ul>
+    </div>
+    </div>
+  </nav>
+  
+  
+    
+    <!-- Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <!-- <span aria-hidden="true">%times;</span> -->
+        </div>
+        <div class="modal-body">
+            <form id="signup-form">
+                <div class="form-group">
+                  <input type="text" id="signup-email" class="form-control" placeholder="Title" required>
+                </div>
+                <div class="form-group">
+                  <input type="password" id="signup-password" class="form-control" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Save changes</button>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Modal -->
+<div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">Autenticación</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form id="login-form">
+                <div class="form-group">
+                <input type="text" id="login-email" class="form-control" placeholder="Title" required> 
+               
+                </div>
+                <div class="form-group">
+                <input type="password" id="login-password" class="form-control" placeholder="Password" required> 
+                </div>
+                <button type="submit" class="btn btn-secondary btn-block">
+                    Login
+                </button>
+                <!-- <button type="button" id="googleLogin" class="nav-item logged-in" style="display: none;">
+                    Inicio de sesión con Google
+                </button>
+                <button type="button" id="eLogin" class="nav-item logged-in" style="display: none;">
+                  Inicio
+              </button> -->
+                <br>
+              </form>
+        </div>
+        
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+  crossorigin="anonymous"></script>
+
+ 
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+
+
+  <script id="MainScript">
+   
+    var firebaseConfig = {
+
+    apiKey: "AIzaSyB_kVGGxySVGzp1FeQ7OzkS7pxFlkwL_Vg",
+    authDomain: "asisavidtel-e9b8d.firebaseapp.com",
+    databaseURL: "https://asisavidtel-e9b8d-default-rtdb.firebaseio.com",
+    projectId: "asisavidtel-e9b8d",
+    storageBucket: "asisavidtel-e9b8d.appspot.com",
+    messagingSenderId: "802668543452",
+    appId: "1:802668543452:web:f4ac9639f475ddcdafa319",
+    measurementId: "G-QD3V799ZGN"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const auth = firebase.auth();
+    const fs = firebase.firestore()
+
+    var nameV, rollV, secV, genV;
+    function Ready(){
+      nameV = document.getElementById('namebox').value;
+      rollV = document.getElementById('rollbox').value;
+      secV = document.getElementById('secbox').value;
+      genV = document.getElementById('genbox').value;
+    }
+
+    // document.getElementById('insert').onclick = function() {
+    //   Ready();
+    //   firebase.database().ref('student/'+rollV).set({
+    //     NameOfStudent: nameV,
+    //     RollNo: rollV,
+    //     Section: secV,
+    //     Gender: genV
+    //   });
+    // }
+
+    // document.getElementById("select").onclick = function() {
+    //   Ready();
+    //   firebase.database().ref('student/'+rollV).on('value',function(snapshot){
+    //     document.getElementById('namebox').value= snapshot.val().NameOfStudent;
+    //     document.getElementById('secbox').value= snapshot.val().Section;
+    //     document.getElementById('genbox').value= snapshot.val().Gender;
+
+      
+    //   });
+    // }
+
+    // document.getElementById('update').onclick = function() {
+    //   Ready();
+    //   firebase.database().ref('student/'+rollV).update({
+    //     NameOfStudent: nameV,
+    //     Section: secV,
+    //     Gender: genV
+    //   });
+    // }
+
+    // document.getElementById('delete').onclick = function() {
+    //   Ready();
+    //   firebase.database().ref('student/'+rollV).remove();
+    // }
+
+ 
+  </script>
+  
+  <script src="./main.js"></script>
+
+  <!-- slider -->
+
+  <!-- slider -->
+
+
+       
+
+            
+
+          <main>
+
+            <section class="presentation container">
+              <br>
+              
+ 
+               <h2 class="subtitle">Procedimiento y Trámite de Peticiones, Quejas y Recursos</h2>
+               <p class="presentation__copy"><h5><b>Petición:</b> Solicitud de servicios o de información en relación con los servicios prestados por el operador, o cualquier manifestación del usuario en relación con sus derechos.</h5></p>
+               <p class="presentation__copy"><h5><b>Queja o Reclamo:</b> Manifestación de inconformidad por parte del usuario al operador en relación con la prestación de sus servicios o el ejercicio de sus derechos.</h5></p>
+               <p class="presentation__copy"><h5><b>Recuerde:</b> En caso de presentar un reclamo en relación con el monto de 
+                su factura, deberá proceder al pago de las sumas que no sean objeto de reclamación, antes de la fecha de pago 
+                oportuno. Cuando se trate de petición/reclamo asociado con la facturación podrá presentarla
+                 máximo dentro de los seis (6) meses siguientes contados a partir del vencimiento del pago oportuno 
+                 de la factura.</h5></p>
+               <p class="presentation__copy"><h5><b>Recurso de reposición:</b> Es cualquier manifestación de inconformidad del 
+                usuario respecto de la decisión tomada por el proveedor frente a una petición o queja, expresada ante el proveedor 
+                para que éste mismo aclare, modifique o revoque dicha decisión. Recurso de reposición en subsidio de apelación: Es cualquier manifestación de inconformidad del usuario respecto de la decisión tomada por el proveedor, para ser revisada y decidida por la Superintendencia de Industria y Comercio –SIC-. Se presenta en subsidio y de manera simultánea al recurso de reposición, es decir, que, si el usuario así lo quiere, lo presenta en el mismo momento que presenta el recurso de reposición y, en caso que el proveedor confirme la negativa frente a las pretensiones del usuario, dicho proveedor deberá entregar el expediente completo a la SIC para que ésta lo revise y decida de fondo.</h5></p>
+               <p class="presentation__copy"><h5><b>Estimado cliente:</b> Usted puede interponer sus peticiones, quejas y recursos a través de:
+                Nuestra líneas de atención: Tel: 882 0652 – 882 0088 Servicios Cel: wp, 3112448956 – 3507019611.
+                Página Web: www.avidtel.net A través de nuestro Centro de Servicio, oficina central – líneas de contacto,
+                Red social: Facebook, whatsapp. Para ello es necesario que suministre la siguiente información,
+                 en el formato para presentar Petición, Queja/reclamo o Recurso.</h5></p>
+               <p class="presentation__copy"><h5><b>Tipo de requerimiento:</b> Petición, Queja o Recursos Nombres y apellidos 
+                o razón social del cliente Tipo y número de documento o número telefónico, motivo del requerimiento, dirección 
+                para el envío de la respuesta ( física o de correo electrónico ), Teléfonos de contacto, Descripción de los 
+                hechos en que se fundamenta la petición, solicitud o recurso. AVIDTEL dará respuesta dentro de los  quince [15] días 
+                hábiles siguientes a la fecha de su presentación. En caso de ser necesario recopilar pruebas adicionales para atender
+                 su requerimiento, el tiempo de respuesta se ampliará por un periodo igual, lo cual le será informado previamente.</h5></p>
+              
+               <a href="http://127.0.0.1:5500/formulariopqr.html" class="presentation__cta">Formulario PQR</a>
+               <!-- --- -->
+            
+                      <!-- ---  -->
+                           
+             
+
+
+             
+
+
+            
+            <section class="testimony container">
+            <h2 class="subtitle">Nuestras aplicaciones</h2>
+            
+            <div class="testimony__grid">
+              <article class="testimony__item">
+                <div class="testimony__person">
+                  <img src="assets/avtqr.png" class="testimony__img"  alt="">
+                  <div class="testimony__texts">
+                    <h3 class="testimony__name">APP AVIDTEL</h3>
+                    <p class="testimony__verification">Asistente de cambio de credenciales </p>
+                  </div>
+                </div>
+                <p class="testimony__review">Escanear imagen Qr para ir a la Play Store y descargar App.</p>
+              </article>
+              <article class="testimony__item">
+                <div class="testimony__person">
+                  <img src="assets/avt2.png" class="testimony__img"  alt="">
+                  <div class="testimony__texts">
+                    <h3 class="testimony__name">WEB APP AVIDTEL</h3>
+                    <p class="testimony__verification">Pagina web, conoce nuestros planes y servicios</p>
+                  </div>
+                </div>
+                <p class="testimony__review">Escanear imagen Qr para ir a la web Avidtel en tu dispositivo de mano.</p>
+              </article>
+            </div>
+          
+          <footer class="footer">
+  
+            <div class="container footer__grid"></div>
+            <h3 class="nav__items nav__items--footer">Regulación: </h3>
+            <nav class="nav nav--footer">
+                           
+              <a class="nav__items nav__items--footer" href="">Internet Sano</a>
+              <a class="nav__items nav__items--footer" href="">Entes Reguladores</a>
+              <a class="nav__items nav__items--footer" href="">Resoluciones</a>
+              <a class="nav__items nav__items--footer" href="">Proteccion de Datos</a>
+            </nav>
+          
+            <section class="footer__contact">
+              <h3 class="footer__title">Contactame</h3>
+              <div class="footer__icons">
+                <span class="footer__container-icons">
+                  <a class="fab fa-facebook-f footer__icon" href="#"></a>
+                </span>
+                <span class="footer__container-icons">
+                  <a class="fab fa-youtube footer__icon" href="#"></a>
+                </span>
+                <span class="footer__container-icons ">
+                  <a class="fab fa-whatsapp footer__icon" href="#"></a>
+                </span>
+             
+              </div>
+            </section>
+          </footer>         
+        </main>  
+
+                              
+          <script src="https://kit.fontawesome.com/e3b02ee0a7.js" crossorigin="anonymous"></script>
+
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+          <a href="https://api.whatsapp.com/send?phone=+573112448956&text=Hola%21%20Bienvenido." class="float" target="_blank">
+          <i class="fa fa-whatsapp my-float"></i>
+          <p>CHAT</p>
+          </a>
+
+          
+
+
+         
+  
+</body>
+
+
+</html>
+

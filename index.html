@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avidtel Interconecta tu vida</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<!-- 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./stylewx.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/stilos.css">
+
+</head>
+
+
+<body>
+
+  
+  
+  <!-- //-- -->
+
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Busqueda" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav> -->
+
+  <!-- //-- -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a href="http://127.0.0.1:5500/" class="navbar-left"><img src="assets/logo.jpg"></a>
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+
+
+        <li class="nav-item logged-out" style="display: block;">
+            <a class="navbar-brand" href="http://127.0.0.1:5500/micuenta.html"><b>Mi Cuenta</b></a>
+        </li>                  
+          
+        <li class="nav-item logged-out" style="display: block;">
+          <a class="navbar-brand" href="http://127.0.0.1:5500/sobrenosotros.html">Sobre nosotros</a>
+        </li>
+        <li class="nav-item logged-out" style="display: block;">
+            <a class="navbar-brand" href="http://127.0.0.1:5500/soporte.html">Soporte</a>
+        </li>
+        <li class="nav-item logged-out" style="display: block;">
+          <a class="navbar-brand" href="http://127.0.0.1:5500/servicios.html" >Servicios</a>
+        </li>
+       
+        <li class="nav-item logged-out" style="display: none;">
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#signupModal">Registro de Usuario</a>
+        </li>
+        <li class="nav-item logged-in" style="display: none;">
+          <a class="navbar-brand" href="#" id="logout">Cerrar Sesión </a>
+        </li>
+           
+        </ul>
+    </div>
+    </div>
+  </nav>
+
+  
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+  crossorigin="anonymous"></script>
+
+ 
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+
+
+  <script id="MainScript">
+   
+    var firebaseConfig = {
+
+    apiKey: "AIzaSyB_kVGGxySVGzp1FeQ7OzkS7pxFlkwL_Vg",
+    authDomain: "asisavidtel-e9b8d.firebaseapp.com",
+    databaseURL: "https://asisavidtel-e9b8d-default-rtdb.firebaseio.com",
+    projectId: "asisavidtel-e9b8d",
+    storageBucket: "asisavidtel-e9b8d.appspot.com",
+    messagingSenderId: "802668543452",
+    appId: "1:802668543452:web:f4ac9639f475ddcdafa319",
+    measurementId: "G-QD3V799ZGN"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const auth = firebase.auth();
+    const fs = firebase.firestore()
+
+    var nameV, rollV, secV, genV;
+    function Ready(){
+      nameV = document.getElementById('namebox').value;
+      rollV = document.getElementById('rollbox').value;
+      secV = document.getElementById('secbox').value;
+      genV = document.getElementById('genbox').value;
+    }
+
+    // document.getElementById('insert').onclick = function() {
+    //   Ready();
+    //   firebase.database().ref('student/'+rollV).set({
+    //     NameOfStudent: nameV,
+    //     RollNo: rollV,
+    //     Section: secV,
+    //     Gender: genV
+    //   });
+    // }
+
+    // document.getElementById("select").onclick = function() {
+    //   Ready();
+    //   firebase.database().ref('student/'+rollV).on('value',function(snapshot){
+    //     document.getElementById('namebox').value= snapshot.val().NameOfStudent;
+    //     document.getElementById('secbox').value= snapshot.val().Section;
+    //     document.getElementById('genbox').value= snapshot.val().Gender;
+
+      
+    //   });
+    // }
+
+    // document.getElementById('update').onclick = function() {
+    //   Ready();
+    //   firebase.database().ref('student/'+rollV).update({
+    //     NameOfStudent: nameV,
+    //     Section: secV,
+    //     Gender: genV
+    //   });
+    // }
+
+    // document.getElementById('delete').onclick = function() {
+    //   Ready();
+    //   firebase.database().ref('student/'+rollV).remove();
+    // }
+
+ 
+  </script>
+  
+  <script src="./main.js"></script>
+
+  <!-- slider -->
+
+  <!-- slider -->
+
+
+        <header class="hero">
+          <div class="container">
+            <nav class="nav">
+              <!-- a*3 -->
+            
+              <a href="http://127.0.0.1:5500/planesdeinternet.html" class="nav__items nav__items--cta">Planes de Internet</a>
+              <a href="http://127.0.0.1:5500/serviciosweb.html" class="nav__items nav__items--cta">Servicios web</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <!-- <a href="#" class="nav__items">Sobre nosotros</a>
+              <a href="#" class="nav__items">Soporte</a> -->
+              </nav>
+                <section class="hero__container">
+                  <div class="hero__texts">
+                    <!-- <h1 class="hero__title">Avidtel Interconecta tu vida
+                    </h1> -->
+                    <br>
+                    <br>
+                    <br>
+                    <h3 class="hero__subtitle">Apoya Lo Nuestro.</h3>
+                    <a href="http://127.0.0.1:5500/contactenos.html" class="hero__cta"><h4>Contactenos</h4></a>
+                    
+                  </div>
+
+                </section>
+            </div>
+
+            <div class="hero__wave" style="overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgb(255, 253, 252);"></path></svg></div>
+                
+            </header>
+
+            
+
+          <main>
+
+            
+            <section class="presentation container">
+              <center>
+              <img src="assets/3web.jpg" class="presentation_picture">
+            
+              <h2 class="subtitle">AVIDTEL - ISP</h2>
+            </center>
+              <p class="presentation__copy"><h4>Empresa Proveedora de Servicios de Internet (ISP), ubicada en Saravena (Arauca), Conectando personas y empresas a la red mundial de Fibra óptica y con servicios inalambricos para el área Rural y Urbana, Visìtanos o escríbenos para mas información.</h4></p>
+              
+                <a href="#" class="presentation__cta">Sobre nosotros</a>
+
+            </section>
+
+            <section class="projects">
+              <div class="container">
+                <!-- <a href="#" ><h3><b>Conoce nuestra atención en cuarentena</b></h3></a> -->
+                <h2 class="subtitle">Servicios</h2>
+                <div class="projects__grid">
+
+                  <article class="projects__item">
+                    <img src="assets/6web.jpg" class="projects__img">
+                    <div class="projects__hover">
+                      <h2 class="projects__title">FIBRA ÓPTICA</h2>
+                      
+                      <i class="fas fa-eye projects__icon"></i>
+                    </div>
+                  </article>
+                  <article class="projects__item">
+                    <img src="assets/7web.jpg" class="projects__img">
+                    <div class="projects__hover">
+                      <h2 class="projects__title">INTERNET DEDICADO</h2>
+                    
+                      <i class="fas fa-ethernet projects__icon"></i>
+                    </div>
+                  </article>
+                  <article class="projects__item">
+                    <img src="assets/8web.jpg" class="projects__img">
+                    <div class="projects__hover">
+                      <h2 class="projects__title">RADIO ENLACES</h2>
+                     
+                      <i class="fas fa-wifi projects__icon"></i>
+                    </div>
+                  </article>
+                  <article class="projects__item">
+                    <img src="assets/9web.jpg" class="projects__img">
+                    <div class="projects__hover">
+                      <h2 class="projects__title">SOPORTE EN REDES LAN</h2>
+  
+                      <i class="fas fa-network-wired projects__icon"></i>
+                    </div>
+                  </article>
+                  <article class="projects__item">
+                    <img src="assets/10web.jpg" class="projects__img">
+                    <div class="projects__hover">
+                      <h2 class="projects__title">IP'S PUBLICA</h2>
+                    
+                      <i class="fas fa-ellipsis-h projects__icon"></i>
+                    </div>
+                  </article>
+                  <article class="projects__item">
+                    <img src="assets/5web.jpg" class="projects__img">
+                    <div class="projects__hover">
+                      <h2 class="projects__title">SOPORTE TECNICO</h2>
+                    
+                      <i class="fas fa-toolbox projects__icon"></i>
+                    </div>
+                  </article>
+              </div>
+            </section>
+      
+            <section class="about container">
+             
+              <div class="about__texts">
+                
+                <h2 class="subtitle">Solicita una suscripción del plan de su preferencia</h2>
+                <p class="about__paragraph">Lee la información de nuestros planes y elije a la que mejor se adapte a su necesidades, si realiza el proceso de inscripción en linea recibe el descuento del 5% del valor de instalación, valido temporalmente… Recuerda quédate en casa y en días de cuarentena Avidtel Interconecta tu Vida.</p>
+                <a href="http://127.0.0.1:5500/planesdeinternet.html" class="presentation__cta">Ver Planes de Internet</a>
+            
+               
+                  <!-- <figure class="about__img">
+                    <img src="assets/5web.jpg" class="about__picture">
+                  </figure> -->
+              </div>
+              <div class="about__texts">
+                
+                <h2 class="subtitle">¿Tienes un requerimiento para nosotros? ¡Llámanos ahora!</h2>
+                <p class="about__paragraph">
+                  <h3>Cel: 350 701 9611</h3></p>
+                <p class="about__paragraph"><h3>
+                  Whatsapp: 311 244 8956</h3></p>
+                  
+                
+                
+               
+                  <!-- <figure class="about__img">
+                    <img src="assets/5web.jpg" class="about__picture">
+                  </figure> -->
+              </div>
+              
+              
+              <div class="about__texts">
+                <h2 class="subtitle">CONOCE NUESTROS CANALES DE ATENCIÓN</h2>
+                <p class="about__paragraph"><h3>Nuestra gestión del servicio al cliente (GSC).</h3>
+                  </p>
+                <p class="about__paragraph">De conformidad a la Comisión de Regulación de Comunicaciones (CRC), usted tiene derecho a presentar Peticiones, Quejas/Reclamos y Recursos (PQR´s), a través de los siguientes medios de atención al usuario</p>
+                  <figure class="about__img about__img--left">
+                    <a href="http://127.0.0.1:5500/contactenos.html" class="presentation__cta">Oficina de atención al usuario</a>
+                    <a href="http://127.0.0.1:5500/soporte.html" class="presentation__cta">Procedimiento y tramite PQR</a>
+                    <a href="http://127.0.0.1:5500/formulariopqr.html" class="presentation__cta">Formulario PQR</a>
+                
+                    <br>
+                    <br>
+                    <img src="assets/4web.svg" class="about__picture">
+                    
+                  </figure>
+              </div>
+            </section>
+
+            
+            
+            
+              
+            <section class="testimony container">
+            <h2 class="subtitle">Nuestras aplicaciones</h2>
+            
+            <div class="testimony__grid">
+              <article class="testimony__item">
+                <div class="testimony__person">
+                  <img src="assets/avtqr.png" class="testimony__img"  alt="">
+                  <div class="testimony__texts">
+                    <h3 class="testimony__name">APP AVIDTEL</h3>
+                    <p class="testimony__verification">Asistente de cambio de credenciales </p>
+                  </div>
+                </div>
+                <p class="testimony__review">Escanear imagen Qr para ir a la Play Store y descargar App.</p>
+              </article>
+              <article class="testimony__item">
+                <div class="testimony__person">
+                  <img src="assets/avt2.png" class="testimony__img"  alt="">
+                  <div class="testimony__texts">
+                    <h3 class="testimony__name">WEB APP AVIDTEL</h3>
+                    <p class="testimony__verification">Pagina web, conoce nuestros planes y servicios</p>
+                  </div>
+                </div>
+                <p class="testimony__review">Escanear imagen Qr para ir a la web Avidtel en tu dispositivo de mano.</p>
+              </article>
+            </div>
+          
+          <footer class="footer">
+  
+            <div class="container footer__grid"></div>
+            <h3 class="nav__items nav__items--footer">Regulación: </h3>
+            <nav class="nav nav--footer">
+                           
+              <a class="nav__items nav__items--footer" href="http://127.0.0.1:5500/internetsano.html">Internet Sano</a>
+              <a class="nav__items nav__items--footer" href="http://127.0.0.1:5500/entesreguladores.html">Entes Reguladores</a>
+              <a class="nav__items nav__items--footer" href="http://127.0.0.1:5500/resoluciones.html">Resoluciones</a>
+              <a class="nav__items nav__items--footer" href="http://127.0.0.1:5500/protecciondedatos.html">Proteccion de Datos</a>
+            </nav>
+          
+            <section class="footer__contact">
+              <h3 class="footer__title">Contactame</h3>
+              <div class="footer__icons">
+                <span class="footer__container-icons">
+                  <a class="fab fa-facebook-f footer__icon" href="https://www.facebook.com/AvidtelNet"></a>
+                </span>
+                <span class="footer__container-icons">
+                  <a class="fab fa-youtube footer__icon" href="#"></a>
+                </span>
+                <span class="footer__container-icons ">
+                  <a class="fab fa-whatsapp footer__icon" href="https://api.whatsapp.com/send?phone=+573112448956&text=Hola%21%20Bienvenido."></a>
+                </span>
+             
+              </div>
+            </section>
+          </footer>         
+        </main>  
+
+        <!-- slider -->
+        <div class="sliderPop" style="display:none;">
+          <div class="ct-sliderPop-container">
+            <div class="ct-sliderPop ct-sliderPop-slide1 open">
+              <div class="inner">
+            
+                <!-- <i class="fa fa-code" aria-hidden="true"></i> -->
+            
+                <a alt="Cerrar" class="ct-sliderPop-close" style="color:#FFFFFF"><h4>Cerrar</h4></a>
+                <h2>COVID-19</h2>
+             
+                <img alt="Cerrar"  src="assets/17web.jpg">
+               
+                <p>Con las reglas frente a la emergencia por el COVID-19 estaremos #ComunicadosComoEs.</p>
+                
+                <!-- <h1>Code</h1> -->
+            
+                <!-- <div class="map-white-border"></div>
+                <h2>Programming Not Required</h2>     -->
+                             
+                <a alt="Cerrar" class="ct-sliderPop-close" style="color:#FFFFFF"><h4>Cerrar</h4></a>
+                
+              </div>
+            </div>
+            <div class="ct-sliderPop ct-sliderPop-slide2">
+              <div class="inner">
+            
+                <!-- <i class="fa fa-code" aria-hidden="true"></i> -->
+            
+                <a alt="Cerrar" class="ct-sliderPop-close" style="color:#FFFFFF"><h4>Cerrar</h4></a>
+                <h2>PLANES DE INTERNET</h2>
+             
+                <img alt="Cerrar"  src="assets/18web.jpg">
+                <!-- <div class="map-white-border"></div> -->
+                <p>Planes de internet hogar y comercial.</p>
+                
+                <!-- <h1>Code</h1> -->
+            
+                <!-- <div class="map-white-border"></div>
+                <h2>Programming Not Required</h2>     -->
+                             
+                <a alt="Cerrar" class="ct-sliderPop-close" style="color:#FFFFFF"><h4>Cerrar</h4></a>
+                
+              </div>
+            </div>
+            <div class="ct-sliderPop ct-sliderPop-slide3">
+              <div class="inner">
+            
+                <!-- <i class="fa fa-code" aria-hidden="true"></i> -->
+            
+                <a alt="Cerrar" class="ct-sliderPop-close" style="color:#FFFFFF"><h4>Cerrar</h4></a>
+                <h2>EQUIPO TECNICO</h2>
+             
+                <img alt="Cerrar"  src="assets/19web.jpg">
+                <!-- <div class="map-white-border"></div> -->
+                <p>Equipo y personal calificado.</p>
+                
+                <!-- <h1>Code</h1> -->
+            
+                <!-- <div class="map-white-border"></div>
+                <h2>Programming Not Required</h2>     -->
+                             
+                <a alt="Cerrar" class="ct-sliderPop-close" style="color:#FFFFFF"><h4>Cerrar</h4></a>
+                
+              </div>
+            </div>
+            <div class="ct-sliderPop ct-sliderPop-slide1">
+              <div class="inner">
+            
+                <!-- <i class="fa fa-code" aria-hidden="true"></i> -->
+            
+                <a alt="Cerrar" class="ct-sliderPop-close" style="color:#FFFFFF"><h4>Cerrar</h4></a>
+                <h2>INTERNET RURAL</h2>
+             
+                <img alt="Cerrar"  src="assets/20web.jpg">
+                <!-- <div class="map-white-border"></div> -->
+                <p>Contactanos para realizar una viabilidad en su zona rural.</p>
+                
+                <!-- <h1>Code</h1> -->
+            
+                <!-- <div class="map-white-border"></div>
+                <h2>Programming Not Required</h2>     -->
+                             
+                <a alt="Cerrar" class="ct-sliderPop-close" style="color:#FFFFFF"><h4>Cerrar</h4></a>
+                
+              </div>
+            </div>
+            <div class="ct-sliderPop ct-sliderPop-slide2">
+              <div class="inner">
+            
+                <!-- <i class="fa fa-code" aria-hidden="true"></i> -->
+            
+                <a alt="Cerrar" class="ct-sliderPop-close" style="color:#FFFFFF"><h4>Cerrar</h4></a>
+                <h2>AVIDTEL EN SUS 12 AÑOS</h2>
+             
+                <img alt="Cerrar"  src="assets/3web.jpg">
+                <!-- <div class="map-white-border"></div> -->
+                <p>Trasformando ideas a realidades.</p>
+                
+                <!-- <h1>Code</h1> -->
+            
+                <!-- <div class="map-white-border"></div>
+                <h2>Programming Not Required</h2>     -->
+                             
+                <a alt="Cerrar" class="ct-sliderPop-close" style="color:#FFFFFF"><h4>Cerrar</h4></a>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/flexslider.min.css" rel="stylesheet">
+        <link href="popup-slider.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/jquery.flexslider-min.js"></script>
+        <script src="popup-slider.js"></script>
+  <!-- slider -->
+                        
+          <script src="https://kit.fontawesome.com/e3b02ee0a7.js" crossorigin="anonymous"></script>
+
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+          <a href="https://api.whatsapp.com/send?phone=+573112448956&text=Hola%21%20Bienvenido." class="float" target="_blank">
+          <i class="fa fa-whatsapp my-float"></i>
+          <p>CHAT</p>
+          </a>
+
+          
+
+
+         
+  
+</body>
+
+
+</html>
+
